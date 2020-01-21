@@ -45,5 +45,8 @@
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | relURL }}"></script>
     {{ end }}
+    {{ range .Params.page_js }}
+    <script src="{{ . | absURL }}"></script>
+    {{ end }}
 </body>
 </html>
